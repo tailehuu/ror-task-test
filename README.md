@@ -3,8 +3,8 @@
 This repo includes:
 
   - Check Credit Card function based on Luhn algorithm
-  - Create CHECK DIGIT
-  - Payment model which does not allow duplicate line_item_id and service_id
+  - Add CHECK DIGIT
+  - Create Payment model which does not allow **duplicate** line_item_id and service_id
 
 ####Requirement:
   
@@ -28,13 +28,13 @@ This repo includes:
 
 #####Q: Create Permanent Link
 
-#####A: The answer in 
+#####A: Find my answer in:
 
     > /db/migrate/20141020170826_add_permalink_to_post.rb
     > /app/models/utility.rb
     
 #####Q: Check Credit Card Number
-#####A: Utility.check_credit_card_number(number)
+#####A: Take a look Utility.check_credit_card_number(number)
 
     def self.check_credit_card_number (number)
         # split the string to array
@@ -85,7 +85,7 @@ This repo includes:
     end
 
 #####Q: Create check digit
-#####A: Utility.create_check_digit(number)
+#####A: Take a look Utility.create_check_digit(number)
 
     def self.create_check_digit (number)
         # split the string to array
@@ -141,7 +141,7 @@ This repo includes:
     end
 
 #####Q: Ensure that no duplicate Payment (with the same line_item_id, service_id) objects can exist in our system.
-#####A: 
+#####A: Please find bellow:
 
   - Add multi index to Payment model
 
