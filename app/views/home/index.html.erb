@@ -1,0 +1,23 @@
+<h1>Ruby Task Test</h1>
+
+<h3>Create Check Digit</h3>
+<%= form_tag home_createDigit_path do %>
+    <div class="field">
+      <%= label_tag 'Number:' %> <br />
+      <%= text_field_tag 'number' %>
+    </div>
+    <div class="actions">
+      <%= submit_tag "Create" %>
+    </div>
+<% end %>
+
+<h3>Check Digit</h3>
+<%= form_tag home_checkDigit_path do %>
+    <div class="field">
+      <%= label_tag 'Number:' %> <br />
+      <%= text_field_tag 'number' %>
+    </div>
+    <div class="actions">
+      <%= submit_tag "Check" %>
+    </div>
+<% end %>

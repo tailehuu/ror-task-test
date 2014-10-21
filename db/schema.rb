@@ -11,13 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141020170826) do
+ActiveRecord::Schema.define(:version => 20141021091538) do
+
+  create_table "line_items", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "payments", :force => true do |t|
+    t.string   "name"
+    t.integer  "service_id"
+    t.integer  "line_item_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "payments", ["line_item_id", "service_id"], :name => "index_payments_on_line_item_id_and_service_id", :unique => true
 
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "permalink"
+  end
+
+  create_table "services", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
